@@ -1,0 +1,287 @@
+@keyframes fadeInRight {
+    0%{
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+    50%{
+    opacity: 0;
+    transform: translate3d(85%, 0, 0);
+}
+    100%{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes fadeInBot {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+}
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+}
+}
+
+@keyframes mouvementvagues {
+    from{
+        transform: translate3d(0%, 0, 0);
+}
+    to{
+        transform: translate3d(-50%, 0, 0);
+}
+}
+
+
+@keyframes Glow {
+    from {
+        text-shadow: 0 0 0px;
+}
+
+    to {
+        text-shadow: 0 0 12px #FFFFFF;;
+}
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+}
+  
+    to {
+      opacity: 1;
+}
+}
+
+body{
+    min-height: 850px;
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(240, 240, 240);
+    -webkit-box-shadow: 0px -1px 13px 4px #000000; 
+    box-shadow: 0px -1px 13px 4px #000000;
+}
+
+#main-title{
+    width: 100%;
+    border:none;
+    display:block;
+}
+
+header{
+    margin: none;
+    max-height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+#contain-img{
+    float: left;
+    overflow: hidden;
+    max-width: 50%;
+    margin-right: 10px;
+}
+
+#imgsection1{
+    float: left;
+    max-width: 100%;
+    animation: fadeInRight 0.4s linear;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-items: flex-start;
+    height: max-content;
+    width: 100%;
+    background-color: black;
+}
+
+#main-menu{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    width: 100%;
+    min-width: max-content;
+    padding: 5px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    list-style: none;
+}
+
+.menu:hover, .menu:active{
+    background-color: turquoise;
+}
+
+
+h2{
+    font-size: 1.4em;
+    font-family: 'Pacifico', cursive;
+    margin: auto;
+    text-align: center;
+    animation: fadeIn 0.5s linear;
+}
+
+p{
+    margin: 0;
+    text-align: justify;
+    padding: 10px;
+}
+
+section{
+    position: relative;
+    min-height: 485px;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactez-nous{
+    margin-top: 5%;
+    min-height: 525px;
+}
+
+a{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+h1{
+    position: absolute;
+    top: 25%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Pacifico', cursive;
+    font-size: 10vw;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color: white;
+    animation: Glow 2s linear infinite alternate;
+}
+
+#vagues{
+    background-image: url(img/vagues2.jpg);
+    background-repeat: repeat;
+    width:1596px;
+    height: 35px;
+    animation: mouvementvagues 35s linear infinite;
+}
+
+#contain-vagues{
+    margin-top: 55px;
+    overflow: hidden;
+}
+
+#liste-lieux{
+    margin: 0;
+}
+
+.lieu{
+    padding-bottom: 7px;
+}
+
+#ctct{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#formulaire{
+    align-self: center;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 5%;
+    max-width: 600px;
+    border: turquoise 7px solid;
+    overflow: hidden;
+}
+
+#question{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100px;
+    resize:none;
+}
+
+#envoyer{
+    align-self: center;
+    margin-top: 22px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    background-color: black;
+    height: 40px;
+    font-size: 15px;
+    border: turquoise 1px solid;
+}
+
+#envoyer:hover, #envoyer:active{
+    color: turquoise;
+    border: black 1px solid;
+    background-color: rgb(240, 240, 240);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: fadeInBot 0.4s linear;
+}
+
+textarea{
+    width: 100%;
+    padding: 0;
+}
+
+#mail{
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+@media screen and (min-width: 800px){
+    h1{
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #contain-img{
+        max-width: 60%;
+    }   
+}
+
+
+@media screen and (max-width: 440px){
+    #main-menu{
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 15vw;
+        top: 25%;
+        line-height:18vw;
+    }
+
+    #contain-img,#imgsection1{
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 2%;
+    }
+
+    #liste-lieux{
+        padding-left: 20px;
+    }
+}
