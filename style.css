@@ -143,11 +143,13 @@ section{
     margin-top: 10%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #contactez-nous{
     margin-top: 5%;
     min-height: 525px;
+    justify-content: start;
 }
 
 a{
